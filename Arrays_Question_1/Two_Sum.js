@@ -2,7 +2,7 @@
 const nums = [1,3,7,2,9];
 const tragetToFind = 11;
 
-// Brute Force Solution Time = O(n2), Space = O(1);
+// Brute Force Solution Time = O(n^2), Space = O(1);
 function findTwoSum(nums, target) {
     for (let i = 0; i < nums.length; i++) {
         console.log({i, value: nums[i]});
