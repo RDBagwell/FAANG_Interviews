@@ -1,6 +1,6 @@
 
 const nums = [1,3,7,2,9];
-const tragetToFind = 3;
+const tragetToFind = 11;
 
 // Brute Force Solution Time = O(n2), Space = O(1);
 function findTwoSum(nums, target) {
