@@ -3,7 +3,7 @@ const heights = [0,1,0,2,1,0,3,1,0,1,2]; //8
 * currentWater = min(maxLeft, maxRight) - currentHeight
 */
 
-// Brute Force Solution time O(n^2) space: O(1)
+// Brute Force Solution time: O(n^2) space: O(1)
 function getTrappedRainwater(heights) {
     let totalWater = 0;
     for (let p = 0; p < heights.length; p++) {
@@ -27,7 +27,7 @@ function getTrappedRainwater(heights) {
 
 // console.log(getTrappedRainwater(heights));
 
-// Optimal Solution
+// Optimal Solution time: O(n) space: O(1)
 function getTrappedRainwaterB(heights) {
     let totalWater = 0, p1 = 0, p2 = heights.length - 1, maxLeft = 0, maxRight = 0;
     while (p1 < p2) {
