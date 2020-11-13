@@ -21,6 +21,34 @@ function lengthOfLongestSubstring(s){
   }
     console.log(longest);
 }
+// lengthOfLongestSubstring(string);
 
-lengthOfLongestSubstring(string);
+
+// Optamized  Time: O(n), Space: O(n)
+function lengthOfLongestSubstringB(s){
+  let longest  = 0;
+  //let seen = {};
+  let seen = new Map();
+  let left = 0;
+
+  if(s.length <=1){
+    return s.length;
+  }
+
+  for (let right = 0; right < s.length; right++) {
+      const currentChar = s[right];
+      //const prevSeenChar = seen[currentChar];
+      const prevSeenChar = seen.get(currentChar);
+      if(prevSeenChar >= left){
+        left = prevSeenChar + 1;
+      }
+      //seen[currentChar] = right;
+      seen.set(currentChar, right);
+      longest = Math.max(longest, right - left + 1);
+  }
+
+    console.log(longest);
+}
+
+lengthOfLongestSubstringB(string);
 
